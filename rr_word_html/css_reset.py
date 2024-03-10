@@ -1,4 +1,5 @@
-css = """
+# https://codepen.io/chriscoyier/pen/YrbNGP.css
+full_reset_css = """
 *,
 *::before,
 *::after {
