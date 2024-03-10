@@ -101,6 +101,10 @@ class DocxToHtml:
 
         return str(soup)
 
+    def _remove_blank_lines(self, html_content):
+        # Use a regular expression to remove lines that contain only whitespace
+        return re.sub(r'^\s*$\n', '', html_content, flags=re.MULTILINE)
+
     def convert(self, docx_path):
         doc = Document(docx_path)
         styles = self._get_document_styles(docx_path)
@@ -115,6 +119,6 @@ class DocxToHtml:
 
         html_output = self._remove_blank_html_elements(html_output)
         html_output = self._replace_smart_quotes(html_output)
-
+        html_output = self._remove_blank_lines(html_output)
 
         self._save_file("output.html", html_output)
