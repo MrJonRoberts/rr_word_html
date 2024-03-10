@@ -8,6 +8,6 @@ requires a basic understanding of css.
 By default it will include a simple body reset - although not recommended 
 for production use, it is useful for testing and development.
 
-NOTE: It is slow and is 90 mins work so far, and very untested.
+NOTE: It is slow and is 90 mins work so far, and very untested, and RR does not allow 'styles' in the Tiny editor.
 
 It can produce very large HTML files which are crap to view in a browser..
